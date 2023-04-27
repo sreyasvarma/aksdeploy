@@ -16,8 +16,10 @@ resource "azurerm_kubernetes_cluster" "aks" {
     vm_size             = "Standard_DS2_v2"
     type                = "VirtualMachineScaleSets"
     enable_auto_scaling = false
+    orchestrator_version = "1.24.10"
   }
 
+  
   identity {
     type = "SystemAssigned"
   }
